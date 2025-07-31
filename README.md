@@ -9,6 +9,20 @@ An Android app using ARCore to detect planes and place a 3D drill marker (cube o
 * Support for both cube and cone markers
 * Visual and pose-based feedback
 
+## 📷 Screenshots
+
+
+
+| Plane Detected | Marker Placed |
+
+|----------------|----------------|
+
+| ![Plane]![WhatsApp Image 2025-08-01 at 02 58 42_cc2605c7](https://github.com/user-attachments/assets/d8f806fa-3501-4218-8fcd-9ff377751b69)
+
+ | ![Cube]![WhatsApp Image 2025-08-01 at 02 57 00_9a2a1f3f](https://github.com/user-attachments/assets/8bf5d9fd-849c-4690-93f8-48aeb46f7445)
+
+ |
+
 ## 🚀 Setup Script
 
 Follow these steps in your terminal or command line:
