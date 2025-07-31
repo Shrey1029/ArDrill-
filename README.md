@@ -26,36 +26,24 @@ This Android application allows users to place a **3D drill marker** (represente
 
 ## 📂 Project Structure
 
-## ⚙️ Setup Instructions
-🚀 Getting Started
-
-1. Clone the Repository
-
+# 1. Clone the repository
 git clone https://github.com/Shrey1029/ArDrill-.git
 cd ArDrill-
 
-2. Open in Android Studio
+# 2. Open the project in Android Studio manually (GUI step)
 
-Open the project using Android Studio Arctic Fox or newer.
+# 3. Add the following dependencies to your app/build.gradle
+# (Inside the dependencies block)
+echo "\nAdding dependencies..."
+echo "implementation 'com.google.ar.sceneform:core:1.17.1'" >> app/build.gradle
+echo "implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'" >> app/build.gradle
 
-3. Add Dependencies
+# 4. Update AndroidManifest.xml with required permissions/features
+# You must do this manually:
+echo "\nEnsure this is in your AndroidManifest.xml:" 
+echo "<uses-permission android:name=\"android.permission.CAMERA\" />"
+echo "<uses-feature android:name=\"android.hardware.camera.ar\" android:required=\"true\" />"
+echo "<meta-data android:name=\"com.google.ar.core\" android:value=\"required\" />"
 
-Make sure the following dependencies are present in your app/build.gradle:
-
-implementation 'com.google.ar.sceneform:core:1.17.1'
-implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
-
-4. Update Manifest
-
-In AndroidManifest.xml, ensure the following permissions and features are added:
-
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-feature android:name="android.hardware.camera.ar" android:required="true" />
-
-<meta-data
-    android:name="com.google.ar.core"
-    android:value="required" />
-
-5. Build and Run
-
-Build and run the app on a physical ARCore-supported Android device (e.g., Pixel, OnePlus, etc.). Emulator is not supported.
+# 5. Build and run on a physical device
+# Use Android Studio's Build & Run button
