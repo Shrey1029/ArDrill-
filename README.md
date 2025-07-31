@@ -1,82 +1,71 @@
-AR Placement App for Android 📱🛠️
-This Android application allows users to place a 3D drill marker (represented as a cube or cone) in augmented reality by tapping on flat surfaces detected using ARCore.
+# AR Drill Placement App
 
-🧠 Technologies Used
-ARCore (Google’s Augmented Reality framework)
+An Android app using ARCore to detect planes and place a 3D drill marker (cube or cone) on tap. Built for an assignment project using Kotlin and Sceneform.
 
-Sceneform (3D rendering with ARCore)
+## 📱 Features
 
-Kotlin
+* Plane detection using ARCore
+* Tap to place 3D marker (representing a drill)
+* Support for both cube and cone markers
+* Visual and pose-based feedback
 
-Android Studio
+## 🚀 Setup Script
 
-🎯 Features
-Detects horizontal planes (e.g., floors, tables).
+Follow these steps in your terminal or command line:
 
-Places a 3D marker on tap when a valid plane is detected.
-
-Allows the user to scale, rotate, and move the marker using gestures.
-
-Provides visual feedback to the user, indicating when a plane has been found.
-
-📷 Screenshots
-Plane Detected
-
-Marker Placed
-
-Image of the camera view with a detected plane highlighted.
-
-Image of the 3D marker placed on the surface.
-
-🚀 Getting Started
-Follow these instructions to get the project up and running on your local machine and physical Android device.
-
-Prerequisites
-An ARCore-supported Android device.
-
-Android Studio installed.
-
-Installation Steps
-Clone the repository:
-
+```bash
+# 1. Clone the repository
 git clone https://github.com/Shrey1029/ArDrill-.git
 cd ArDrill-
 
-Open the project in Android Studio:
+# 2. Open the project in Android Studio manually (GUI step)
 
-Launch Android Studio.
+# 3. Add the following dependencies to your app/build.gradle
+# (Inside the dependencies block)
+echo "\nAdding dependencies..."
+echo "implementation 'com.google.ar.sceneform:core:1.17.1'" >> app/build.gradle
+echo "implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'" >> app/build.gradle
 
-Select File > Open and navigate to the cloned project directory.
+# 4. Update AndroidManifest.xml with required permissions/features
+# You must do this manually:
+echo "\nEnsure this is in your AndroidManifest.xml:" 
+echo "<uses-permission android:name=\"android.permission.CAMERA\" />"
+echo "<uses-feature android:name=\"android.hardware.camera.ar\" android:required=\"true\" />"
+echo "<meta-data android:name=\"com.google.ar.core\" android:value=\"required\" />"
 
-Add Dependencies:
+# 5. Build and run on a physical device
+# Use Android Studio's Build & Run button
+```
 
-Open the app/build.gradle file.
+## 📸 Screenshots
 
-Add the following lines inside the dependencies block:
+> (You can add screenshots here later)
 
-// Sceneform
-implementation 'com.google.ar.sceneform:core:1.17.1'
-implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
+## 📦 Folder Structure
 
-Sync the project when prompted by Android Studio.
+```
+ArAssignment/
+├── app/
+│   ├── src/main/java/com/example/arassignment/ArActivity.kt
+│   ├── res/layout/activity_ar.xml
+│   └── AndroidManifest.xml
+├── .gitignore
+└── README.md
+```
 
-Update AndroidManifest.xml:
+## 📋 Requirements
 
-Open app/src/main/AndroidManifest.xml.
+* Android Studio Arctic Fox or later
+* ARCore-supported Android phone
 
-Ensure the following permissions and features are declared inside the <manifest> and <application> tags as shown:
+## 🤝 Contributing
 
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+Pull requests are welcome. For major changes, please open an issue first.
 
-<application
-    ...>
-    <meta-data android:name="com.google.ar.core" android:value="required" />
-    ...
-</application>
+## 📜 License
 
-Build and Run:
+This project is for academic purposes only. Modify and use as needed.
 
-Connect your physical Android device.
+---
 
-Use the Build & Run button (▶️) in Android Studio to install and launch the app.
+Created by [Shreyansh Singh](https://github.com/Shrey1029)
